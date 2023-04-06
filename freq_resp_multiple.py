@@ -61,7 +61,7 @@ if __name__ == "__main__":
     # experimental data
     frequencies1, gains_dB1 = read_data_from_csv(config["experimentalDataLocation"], ',')
 
-    if hasSimulationData:
+    if config["hasSimulationData"]:
         # simulation data
         frequencies2, gains_dB2 = read_data_from_csv(config["simulationDataLocation"], '\t')
 
