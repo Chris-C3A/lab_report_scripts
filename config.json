@@ -1,8 +1,8 @@
 {
-  "title": "Magnitude of transfer function in degrees for Op-AMP",
-  "xlabel": "Frequency (Hz)",
-  "ylabel": "Magnitude (dB)",
-  "experimentalDataLocation": "lab2/experimental_data/task4.csv",
-  "simulationDataLocation": "lab2/simulation_data/task4.txt",
+  "title": "Magnitude of transfer function in dB of Op-AMP when k = 0 and k = 1",
+  "xlabel": "Magnitude (dB)",
+  "ylabel": "Frequency (Hz)",
+  "experimentalDataLocation": "lab2/experimental_data/task7.csv",
+  "simulationDataLocation": "lab2/simulation_data/task7.txt",
   "hasSimulationData": true
 }

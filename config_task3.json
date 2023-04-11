@@ -1,0 +1,8 @@
+{
+  "title": "Vout vs Vin",
+  "xlabel": "Vin (V)",
+  "ylabel": "Vout (V)",
+  "experimentalDataLocation": "lab2/experimental_data/task3.csv",
+  "simulationDataLocation": "",
+  "hasSimulationData": false
+}

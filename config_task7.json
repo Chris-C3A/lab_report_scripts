@@ -1,0 +1,10 @@
+{
+  "title": "Magnitude of transfer function in dB of Op-AMP when k = 0 and k = 1",
+  "xlabel": "Magnitude (dB)",
+  "ylabel": "Frequency (Hz)",
+  "experimentalDataLocation1": "lab2/experimental_data/task7-k=0.csv",
+  "experimentalDataLocation2": "lab2/experimental_data/task7-k=1.csv",
+  "simulationDataLocation1": "lab2/simulation_data/testk=0.txt",
+  "simulationDataLocation2": "lab2/simulation_data/task7-k=1.txt",
+  "hasSimulationData": true
+}

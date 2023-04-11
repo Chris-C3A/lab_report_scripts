@@ -14,9 +14,13 @@ import csv
 # simulationData = 'lab2/simulation_data/task4.txt' # other data: RLC_series.txt
 
 # bode plot function
-def bode_plot(frequencies, gains_dB, color, label, ha, va):
+def bode_plot(frequencies, gains_dB, color, label, ha, va, log_scale=True):
     # Plot the magnitude response
-    plt.semilogx(frequencies, gains_dB, color, label=label)
+    if log_scale:
+        # plt.semilogx(frequencies, list(map(abs, gains_dB)), color, label=label)
+        plt.semilogx(frequencies, gains_dB, color, label=label)
+    else:
+        plt.plot(frequencies, gains_dB, color, label=label)
 
     min_dB = np.min(gains_dB)
     max_dB = np.max(gains_dB)
@@ -52,6 +56,7 @@ def read_data_from_csv(filename, delimiter):
 if __name__ == "__main__":
     # open config file
     f = open("config.json", "r")
+    # f = open("config_task7-k0.json", "r")
 
     # read config file 
     config = json.load(f)

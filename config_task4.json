@@ -1,0 +1,8 @@
+{
+  "title": "Magnitude of transfer function in dB for Op-AMP",
+  "xlabel": "Frequency (Hz)",
+  "ylabel": "Magnitude (dB)",
+  "experimentalDataLocation": "lab2/experimental_data/task4.csv",
+  "simulationDataLocation": "lab2/simulation_data/task4.txt",
+  "hasSimulationData": true
+}
