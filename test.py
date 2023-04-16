@@ -18,14 +18,16 @@ def bode_plot(frequencies, gains_dB, color, label, ha, va, log_scale=True):
     max_index = np.argmax(gains_dB)
 
     # min lines
-    plt.axhline(y=min_dB, color=color, linestyle='--')
-    plt.text(frequencies[min_index], min_dB, str(min_dB) + "dB",
-                color=color, ha=ha, va=va)
+    if abs(min_dB) > 1:
+      plt.axhline(y=min_dB, color=color, linestyle='--')
+      plt.text(frequencies[min_index], min_dB, str(min_dB) + "dB",
+                  color=color, ha=ha, va=va)
 
-    # max lines
-    plt.axhline(y=max_dB, color=color, linestyle='--')
-    plt.text(frequencies[max_index], max_dB, str(max_dB) + "dB",
-                color=color, ha=ha, va=va)
+    if abs(max_dB) > 1:
+      # max lines
+      plt.axhline(y=max_dB, color=color, linestyle='--')
+      plt.text(frequencies[max_index], max_dB, str(max_dB) + "dB",
+                  color=color, ha=ha, va=va)
 
 # helper function to read csv file
 def read_data_from_csv(filename, delimiter):
@@ -63,17 +65,17 @@ if __name__ == "__main__":
     plt.figure(figsize=(10, 6))
 
     # plot experimental data 1
-    bode_plot(frequencies1, gains_dB1, 'b', 'Experimental Data 1', 'left', 'bottom')
+    bode_plot(frequencies1, gains_dB1, 'b', 'Experimental k=0', 'left', 'bottom')
 
     # plot experimental data 2
-    bode_plot(frequencies2, gains_dB2, 'b', 'Experimental Data 2', 'left', 'top')
+    bode_plot(frequencies2, gains_dB2, 'r', 'Experimental k=1', 'left', 'top')
 
     if config["hasSimulationData"]:
         # plot simulation data 1
-        bode_plot(frequencies3, gains_dB3, 'g', 'Simulation Data 1', 'right', 'bottom')
+        bode_plot(frequencies3, gains_dB3, 'g', 'Simulation k=0', 'right', 'bottom')
 
         # plot simulation data 2
-        bode_plot(frequencies4, gains_dB4, 'g', 'Simulation Data 2', 'right', 'top')
+        bode_plot(frequencies4, gains_dB4, 'c', 'Simulation k=1', 'right', 'top')
 
     # plot settings
     plt.xlabel(config["xlabel"])
